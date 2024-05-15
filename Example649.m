@@ -1,3 +1,6 @@
+/* This script check the computations in example 6.4.9,
+on the connected monodromy field of J15 */
+
 load "FermatJacobians2_computeST.m";
 
 

@@ -3,7 +3,6 @@
 /* ------------------------------------------------------------ */
 
 CheckRelations := false;
-m := 15;
 try
 	print "Working with m =", m;
 catch e
@@ -453,11 +452,37 @@ function InterpretMonomialAsAlgebraicNumber(f, m)
 	CommonDenominator := LCM([Denominator(e/(2*m)) : e in exponents]);
 	
 	radical := &*[ PrimeFactorsm[i]^( Integers()!( CommonDenominator/(2*m) * Exponents(mon[1])[i+1] ) ) : i in [1..#PrimeFactorsm] ];
+
+	C<i> := ComplexField(100);
+	ComplexApproximation := &*[ PrimeFactorsm[i]^( Integers()!( CommonDenominator/(2*m) * Exponents(mon[1])[i+1] ) ) : i in [1..#PrimeFactorsm] ];
+
 	
 	U<t> := PolynomialRing(Kf);
 	f := t^CommonDenominator - radical;
 	L := SplittingField(f);
 	r := Roots(ChangeRing(f, L))[1][1];
+
+	// "Find embedding";
+	places := InfinitePlaces(Kf);
+
+	_, iotaIndex := Min( [ Abs(Evaluate(Kf.1, places[j]) - Exp(2*Pi(C)*i/(4*m))) : j in [1..#places] ] );
+	iota := places[iotaIndex];
+
+	/*
+	iota;
+	Evaluate(Kf.1, iota);
+
+	Roots(ChangeRing(f,L));
+	[Evaluate(r[1], iota) : r in Roots(ChangeRing(f, L))];
+	*/
+
+	RealRoots := [ r : r in Roots(ChangeRing(f, L)) | Im(Evaluate(r[1], iota)) lt 10^(-10) ];
+
+	PositiveRoots := [ r : r in RealRoots | Re(Evaluate(r[1], iota)) gt 0 ];
+
+	r := PositiveRoots[1][1];
+
+	// "Chosen root:", Evaluate(r, iota);
 
 	return coeff * r;
 end function;
@@ -479,52 +504,132 @@ end function;
 /* ------------------------------------------------------------ */
 
 
-
-/* The next function computes a single generator of the field Kconn,
+/*
+The next function computes a single generator of the field Kconn,
 starting from an equation for the Mumford-Tate group. The result
-is expressed as the minimal polynomial over Q of that generator. */
+is expressed as the minimal polynomial over Q of that generator.
+*/
+/* This is the purely numerical version, that doesn't work too well
 function ComputeOneGenerator(b)
-	bReorder := Reorder(b, OrderCharacters);
-	// "Computing Gamma-product for relation", b;
-	// "Reordered relation", bReorder;
-	// "Computing Gamma-product for relation", bReorder;
-	NumeratorFactors := [];
-	DenominatorFactors := [];
-	e := 0;
-	for i in [1..(2*Floor(((m-1)/2)))] do
+		bReorder := Reorder(b, OrderCharacters);
+		// "Computing Gamma-product for relation", b;
+		// "Reordered relation", bReorder;
+		"Computing Gamma-product for relation", bReorder;
+		NumeratorFactors := [];
+		DenominatorFactors := [];
+		e := 0;
+		for i in [1..(2*Floor(((m-1)/2)))] do
+
 			if m mod 2 eq 0 and i ge m/2 then
-			ieff := i+1;
-		else
-			ieff := i;
-		end if;
+				ieff := i+1;
+			else
+				ieff := i;
+			end if;
+
 			if bReorder[i] gt 0 then
-			NumeratorFactors := NumeratorFactors cat [ ieff : j in [1..bReorder[i]] ];			else
-			DenominatorFactors := DenominatorFactors cat [ ieff : j in [1..Abs(bReorder[i])] ];
+				NumeratorFactors := NumeratorFactors cat [ ieff : j in [1..bReorder[i]] ];
+			else
+				DenominatorFactors := DenominatorFactors cat [ ieff : j in [1..Abs(bReorder[i])] ];
+			end if;
+			e := e + ieff * bReorder[i];
+		end for;
+
+		elements12 := TriplicateExponents(NumeratorFactors, m);
+		elements22 := TriplicateExponents(DenominatorFactors, m);
+
+		// "As characters:", elements12, elements22;
+
+		u := ComputeGammaProduct(elements12, m) / ComputeGammaProduct(elements22, m);
+		fExact := MinimalPolynomial(u, 2*EulerPhi(m));
+		// "Minimal polynomial obtained numerically", f;
+
+		return fExact;
+end function;
+*/
+
+
+function ComputeOneGenerator(b)
+		bReorder := Reorder(b, OrderCharacters);
+		// "Computing Gamma-product for relation", b;
+		// "Reordered relation", bReorder;
+		// "Computing Gamma-product for relation", bReorder;
+		NumeratorFactors := [];
+		DenominatorFactors := [];
+		e := 0;
+		for i in [1..(2*Floor(((m-1)/2)))] do
+
+			if m mod 2 eq 0 and i ge m/2 then
+				ieff := i+1;
+			else
+				ieff := i;
+			end if;
+
+			if bReorder[i] gt 0 then
+				NumeratorFactors := NumeratorFactors cat [ ieff : j in [1..bReorder[i]] ];
+			else
+				DenominatorFactors := DenominatorFactors cat [ ieff : j in [1..Abs(bReorder[i])] ];
+			end if;
+			e := e + ieff * bReorder[i];
+		end for;
+
+		elements12 := TriplicateExponents(NumeratorFactors, m);
+		elements22 := TriplicateExponents(DenominatorFactors, m);
+
+		// "As characters:", elements12, elements22;
+
+
+		u := ComputeGammaProduct(elements12, m) / ComputeGammaProduct(elements22, m);
+
+
+		uExact, denExact, Result1, Result2 := ComputeExactGammaRatioFromLists(elements12, elements22, m);
+
+		/*
+		"u =", u;
+		"Results1 =", Result1;
+		"Results2 =", Result2;
+		"denExact =", denExact;
+		"Exact representation =", uExact;
+		*/
+
+
+		if m mod 2 eq 0 then
+			uExact := uExact * (z^2 * 1/S.2^4)^(-e * denExact);	// S.2 is 2^(1/(2m)), so S.2^(-4) is 2^(-2/m) = 4^(-1/m)
 		end if;
-		e := e + ieff * bReorder[i];
-	end for;
-	elements12 := TriplicateExponents(NumeratorFactors, m);
-	elements22 := TriplicateExponents(DenominatorFactors, m);
 
-	u := ComputeGammaProduct(elements12, m) / ComputeGammaProduct(elements22, m);
+		// "Exact representation", uExact;
+		// "Exponent of representation", denExact;
 
-	uExact, denExact, Result1, Result2 := ComputeExactGammaRatioFromLists(elements12, elements22, m);
-	if m mod 2 eq 0 then
-		uExact := uExact * (z^2 * 1/S.2^4)^(-e * denExact);	// S.2 is 2^(1/(2m)), so S.2^(-4) is 2^(-2/m) = 4^(-1/m)
-	end if;
+		// "Exact representation as algebraic number", InterpretRationalFunctionAsAlgebraicNumber(uExact, m);
 
-	// "Exact representation", uExact;
-	// "Exponent of representation", denExact;
-	// "Exact representation as algebraic number", InterpretRationalFunctionAsAlgebraicNumber(uExact, m);
 
-	fExact := MinimalPolynomial(InterpretRationalFunctionAsAlgebraicNumber(uExact, m));
-	if denExact gt 1 then
-		gExact := Evaluate(fExact, Parent(fExact).1^denExact);
-		fExact := Factorisation(gExact)[1][1];
-	end if;
+		fExact := MinimalPolynomial(InterpretRationalFunctionAsAlgebraicNumber(uExact, m));
+		if denExact gt 1 then
+			gExact := Evaluate(fExact, Parent(fExact).1^denExact);
+			// "Factorisation", Factorisation(gExact);
 
-	// "Minimal polynomial from exact representation as algebraic number", fExact;
-	return fExact;
+			fact := Factorisation(gExact);
+			_, RightIndex := Min( [ Abs(Evaluate(f[1], u)) : f in fact ] );
+			
+			fExact := Factorisation(gExact)[RightIndex][1];
+
+		end if;
+
+		// "Minimal polynomial from exact representation as algebraic number", fExact;
+
+
+		if m mod 2 eq 0 then
+			// "Exponent e =", e;
+			CC := Parent(u);
+			u := u * ( Exp( 2*Pi(CC)*CC.1/(2*m) ) * (CC!4)^(-1/m) )^(-e);
+		end if;
+		
+		// f := MinimalPolynomial(u, 4*EulerPhi(m));
+		// "Minimal polynomial obtained numerically", f;
+
+		// Abs(Evaluate(fExact, u));
+		assert Abs(Evaluate(fExact, u)) lt 10^(-400);	// Check numerically that we have obtained the right characteristic polynomial
+
+		return fExact;
 end function;
 
 
@@ -537,14 +642,14 @@ polynomial for each of them, and take the
 compositum of all the splitting fields.
 This yields the connected monodromy field Kconn. */
 function compute_Kconn()
-	KK := QNF();
+	KK := CyclotomicField(m);
+	"Number of equations", #B;
 	for b in B do
-		fExact := ComputeOneGenerator(b);
-		F := OptimisedRepresentation(SplittingField(fExact));
-		KK := Compositum(KK, F);
+		time fExact := ComputeOneGenerator(b);
+		time F := OptimisedRepresentation(NumberField(fExact));
+		time KK := Compositum(KK, F);
+		KK;
 	end for;
-
-	KK := Compositum(KK, CyclotomicField(m));
 
 	return KK;
 end function;
@@ -562,18 +667,16 @@ function compute_Kconn_generators()
 end function;
 
 
-
 /* ------------------------------------------------------------ */
 /* --------------- 4. Useful out-put functions ---------------- */
 /* ------------------------------------------------------------ */
 
-
-"This file of code has 3 useful output functions:";
-"	1. compute_Kconn();";
-"	2. print_MT_equations();";
-"	3. usable_char_MT_equations();";
-"	4. compute_Kconn_generators();";
-
+/*
+	This file of code has 3 useful output functions:
+	1. compute_Kconn();
+	2. print_MT_equations();
+	3. usable_char_MT_equations(); 
+*/
 
 
 
