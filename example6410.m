@@ -1,7 +1,7 @@
 /* This script computes the connected monodromy field
 for m odd and composite in in the interval 3..111 */
 
-SetLogFile("TabulateOdd3.out");
+SetLogFile("Example6410.out");
 
 function ExtractKummerGenerators(m, gens)
 	Km := CyclotomicField(m);
