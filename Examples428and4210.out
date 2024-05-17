@@ -1,0 +1,89 @@
+> 
+> m := 15;
+> load "FermatJacobians1_computeMTandKconn.m";
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 15
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+> 
+> MTmatrix := Matrix(Rationals(), [[b[i] : i in [1..Ncols(b)] ]: b in B ]);
+> 
+> 
+> CambioBase := Matrix(Rationals(),9,9,[
+>  [ 1, 1, 0, 0,  0, -1, 0, 0, 0 ],
+>  [ 0, 1, 0, 0,  0,  0, 0, 0, 0 ],
+>  [ 0, 0, 1, 0,  0,  0, 0, 0, 0 ],
+>  [ 0, 0, 0, 1,  1, -1, 0, 0, 0 ],
+>  [ 0, 0, 0, 0,  1,  0, 0, 0, 0 ],
+>  [ 0, 0, 0, 0, -1,  1, 0, 0, 0 ],
+>  [ 0, 0, 0, 0,  0,  0, 1, 0, 0 ],
+>  [ 0, 0, 0, 0,  0,  0, 0, 1, 0 ],
+>  [ 0, 0, 0, 0,  0,  0, 0, 0, 1 ]]);
+> 
+> "Is the base change invertible?";
+Is the base change invertible?
+> IsInvertible(CambioBase);
+true 
+[ 1 -1  0  0  1  1  0  0  0]
+[ 0  1  0  0  0  0  0  0  0]
+[ 0  0  1  0  0  0  0  0  0]
+[ 0  0  0  1  0  1  0  0  0]
+[ 0  0  0  0  1  0  0  0  0]
+[ 0  0  0  0  1  1  0  0  0]
+[ 0  0  0  0  0  0  1  0  0]
+[ 0  0  0  0  0  0  0  1  0]
+[ 0  0  0  0  0  0  0  0  1]
+>  
+> BB := CambioBase*MTmatrix;
+> 
+> PP := PolynomialRing(Rationals(), m-1);
+> RR := RationalFunctionField(PP);
+> AssignNames(~PP, ["x_{" cat Sprint(j) cat "}": j in [1..(m-1)]]);
+> all_equations := [];
+> for x in [1..Nrows(BB)] do
+for>    v := BB[x];
+for>    eqn := RR!1;
+for>            for i in [1..(m-1)] do
+for|for>                    j := OrderCharacters[i];
+for|for>                    if not(v[i] eq 0) then
+for|for|if>                     eqn := eqn * (RR!(PP.j))^(Integers()!v[i]);
+for|for|if>                 end if;
+for|for>                end for;
+for>    Append(~all_equations, eqn);
+for> end for;
+> 
+> "Equations for the MT group of J15:";
+Equations for the MT group of J15:
+> all_equations;
+[
+    x_{5}*x_{10}/x_{7}*x_{8},
+    x_{10}*x_{12}/x_{8}*x_{14},
+    x_{3}*x_{12}/x_{7}*x_{8},
+    x_{6}*x_{9}/x_{7}*x_{8},
+    x_{9}*x_{12}/x_{8}*x_{13},
+    x_{11}*x_{12}/x_{9}*x_{14},
+    x_{1}*x_{14}/x_{7}*x_{8},
+    x_{2}*x_{13}/x_{7}*x_{8},
+    x_{4}*x_{11}/x_{7}*x_{8}
+]
+> 
+> /* ------------------------------------------------------------ */
+> 
+> m := 10;
+> load "FermatJacobians1_computeMTandKconn.m";
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 10
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+> "Equations for the MT group of J10:";
+Equations for the MT group of J10:
+> print_MT_equations();
+[
+    x_{2}/x_{3},
+    x_{4}*x_{9}/x_{3}*x_{7},
+    x_{6}/x_{9},
+    x_{8}/x_{7},
+    x_{1}*x_{9}/x_{3}*x_{7}
+]
+
+Total time: 0.060 seconds, Total memory usage: 32.09MB

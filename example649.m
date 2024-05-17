@@ -2,7 +2,7 @@
 on the connected monodromy field of J15 */
 
 load "FermatJacobians2_computeST.m";
-
+SetLogFile("Example649.out");
 
 pi := Pi(C);
 x1 := P_gamma([9,12,7,2]);

@@ -33,12 +33,12 @@ V, K_coordinates := VectorSpace(K, Rationals());
 /* ------------------ 1. Equations for MT --------------------- */
 /* ------------------------------------------------------------ */
 
-/*Let m, d be positive integers with d | m.
+/* Let m, d be positive integers with d | m.
 This function computes the matrix
 of the norm map from Q(\zeta_m)* to Q(\zeta_d)*,
 where both are considered as the Q-rational points
 of the algebraic tori Res_{Q(\zeta_m)/Q}(G_m) and 
-Res_{Q(\zeta_d)/Q}(G_m)*/
+Res_{Q(\zeta_d)/Q}(G_m) */
 function MatrixOfNorm(m, d)
 	r := EulerPhi(d);
 	c := EulerPhi(m);
@@ -122,7 +122,8 @@ function TriplicateExponents(exponents, m)
 	return result;
 end function;
 
-/*  */
+/* Given a list and an order,
+returns new list with same elements and provided order */
 function Reorder(list, order)
   	result := [];
   	for i in [1..#order] do
@@ -456,16 +457,12 @@ function InterpretMonomialAsAlgebraicNumber(f, m)
 	C<i> := ComplexField(100);
 	ComplexApproximation := &*[ PrimeFactorsm[i]^( Integers()!( CommonDenominator/(2*m) * Exponents(mon[1])[i+1] ) ) : i in [1..#PrimeFactorsm] ];
 
-	/*
-	Sono molto confuso dalla teoria dietro questo conto:
-	se L non è definito globalmente, che effetto ha scegliere un elemento
-	piuttosto che un rappresentante a caso della classe di coniugio?
-	*/
 	U<t> := PolynomialRing(Kf);
 	ff := t^CommonDenominator - radical;
 	L := SplittingField(ChangeRing(ff, Kf));
 	
-	// "Find embedding of Kf in C";
+	/*PATCHED:
+	to select THE positive real root of a certain integer */
 	places := InfinitePlaces(L);
 	_, iotaIndex := Min( [ Abs(Evaluate(Kf.1, places[j]) - Exp(2*Pi(C)*i/(4*m))) : j in [1..#places] ] );
 	iota := places[iotaIndex];

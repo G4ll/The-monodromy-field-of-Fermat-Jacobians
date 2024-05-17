@@ -1,0 +1,164 @@
+> /*
+> We know that X_{20} is 4-dimensional and geometrically isogenous to E^4 for some elli\
+ptic
+> curve E. Two objectives: we want to compute the j-invariant of E (hence its minimal f\
+ield
+> of definition) and the minimal field of definition of an isogeny X_{20} --> E^4
+> */
+> 
+> 
+> K := Rationals();
+> R<x> := PolynomialRing(K);
+> 
+> /*
+> Step 1: we check that among the quotients of C there are elliptic curves
+> whose j-invariant generates Q(\sqrt{5})
+> */
+> 
+> C1 := HyperellipticCurve(x^11+x);
+> G, map, map2 := AutomorphismGroup(C1);
+> 
+> for g in G do
+for>    gp := AutomorphismGroup(C1, [map(g)]);
+for>    X := CurveQuotient(gp);
+for>    X;
+for>    Genus(X);
+for> end for;
+Hyperelliptic Curve defined by y^2 = x^11 + x over Rational Field
+5
+MatrixGroup<5, RationalField() |
+    ScalarMatrix(RationalField(), 5, -1) >
+Conic over Rational Field defined by
+$.2^2 - $.1*$.3
+0
+Hyperelliptic Curve defined by y^2 = x^5 - 5*x^3 + 5*x over Rational Field
+2
+Hyperelliptic Curve defined by y^2 = -x^7 + 9*x^5 - 25*x^3 + 20*x over Rational 
+Field
+3
+> 
+> C2 := HyperellipticCurve(x^5 - 5*x^3 + 5*x);
+> 
+> Qbar := AlgebraicClosure(Rationals());
+> C2bar := ChangeRing(C2, Qbar);
+> 
+> G, map, map2 := AutomorphismGroup(C2bar);
+> Absolutize(Qbar);
+> L := SplittingField(AbsolutePolynomial(Qbar));
+> L := OptimisedRepresentation(L);
+> L;
+Number Field with defining polynomial x^16 + 14*x^14 + 75*x^12 + 176*x^10 + 
+    149*x^8 - 44*x^6 + 35*x^4 - 6*x^2 + 1 over the Rational Field
+> 
+> C2L := ChangeRing(C2, L);
+> G, map, map2 := AutomorphismGroup(C2L);
+> 
+> for g in G do
+for>    gp := AutomorphismGroup(C2L, [map(g)]);
+for>    X := CurveQuotient(gp);
+for>    if Genus(X) eq 1 then
+for|if>                 E := EllipticCurve(X);
+for|if>                 j := jInvariant(E);
+for|if>                 "Minimal polynomial of j-invariant", MinimalPolynomial\
+(j);
+for|if>                 "Discriminant of Q(j):", Discriminant(MaximalOrder(Num\
+berField(MinimalPolynomial(j))));
+for|if>                 "What's the CM order?", HasComplexMultiplication(E);
+for|if>         end if;
+for> end for;
+MatrixGroup<2, K | [
+    ScalarMatrix(K, 2, -1)
+]> where w := K.1 where K := ext<K0|Polynomial(K0, [1, 0, -6, 0, 35, 0, -44, 0, 
+149, 0, 176, 0, 75, 0, 14, 0, 1])> where K0 is RationalField()
+MatrixGroup<2, K | [
+    DiagonalMatrix(K, [ 1/89826*(50848*w^15 + 731200*w^13 + 4085085*w^11 + 
+    10410540*w^9 + 11033360*w^7 + 733760*w^5 + 888800*w^3 + 103485*w), 
+    1/89826*(-50848*w^15 - 731200*w^13 - 4085085*w^11 - 10410540*w^9 - 
+    11033360*w^7 - 733760*w^5 - 888800*w^3 - 103485*w) ])
+]> where w := K.1 where K := ext<K0|Polynomial(K0, [1, 0, -6, 0, 35, 0, -44, 0, 
+149, 0, 176, 0, 75, 0, 14, 0, 1])> where K0 is RationalField()
+MatrixGroup<2, K | [
+    Matrix(SparseMatrix(K, 2, 2, [
+    <1, 2, 1/29942*(2133*w^14 + 33292*w^12 + 207650*w^10 + 629063*w^8 + 
+    908925*w^6 + 402370*w^4 - 92961*w^2 + 68723)>, <2, 1, 1/149710*(-20321*w^14 
+    - 284436*w^12 - 1520650*w^10 - 3535805*w^8 - 2826327*w^6 + 1343544*w^4 - 
+    296505*w^2 + 127547)>]))
+]> where w := K.1 where K := ext<K0|Polynomial(K0, [1, 0, -6, 0, 35, 0, -44, 0, 
+149, 0, 176, 0, 75, 0, 14, 0, 1])> where K0 is RationalField()
+Minimal polynomial of j-invariant x^2 - 1264000*x - 681472000
+Discriminant of Q(j): 5
+What's the CM order? true -20
+MatrixGroup<2, K | [
+    Matrix(SparseMatrix(K, 2, 2, [
+    <1, 2, 1/8166*(2993*w^15 + 43575*w^13 + 248437*w^11 + 659586*w^9 + 
+    778486*w^7 + 203313*w^5 + 99171*w^3 + 11669*w)>, <2, 1, 1/40830*(-19497*w^15
+    - 276185*w^13 - 1506809*w^11 - 3664518*w^9 - 3425130*w^7 + 490595*w^5 - 
+    431029*w^3 - 4069*w)>]))
+]> where w := K.1 where K := ext<K0|Polynomial(K0, [1, 0, -6, 0, 35, 0, -44, 0, 
+149, 0, 176, 0, 75, 0, 14, 0, 1])> where K0 is RationalField()
+Minimal polynomial of j-invariant x^2 - 1264000*x - 681472000
+Discriminant of Q(j): 5
+What's the CM order? true -20
+MatrixGroup<2, K | [
+    DiagonalMatrix(K, [ 1/89826*(-50848*w^15 - 731200*w^13 - 4085085*w^11 - 
+    10410540*w^9 - 11033360*w^7 - 733760*w^5 - 888800*w^3 - 103485*w), 
+    1/89826*(50848*w^15 + 731200*w^13 + 4085085*w^11 + 10410540*w^9 + 
+    11033360*w^7 + 733760*w^5 + 888800*w^3 + 103485*w) ])
+]> where w := K.1 where K := ext<K0|Polynomial(K0, [1, 0, -6, 0, 35, 0, -44, 0, 
+149, 0, 176, 0, 75, 0, 14, 0, 1])> where K0 is RationalField()
+MatrixGroup<2, K | [
+    Matrix(SparseMatrix(K, 2, 2, [
+    <1, 2, 1/29942*(-2133*w^14 - 33292*w^12 - 207650*w^10 - 629063*w^8 - 
+    908925*w^6 - 402370*w^4 + 92961*w^2 - 68723)>, <2, 1, 1/149710*(20321*w^14 +
+    284436*w^12 + 1520650*w^10 + 3535805*w^8 + 2826327*w^6 - 1343544*w^4 + 
+    296505*w^2 - 127547)>]))
+]> where w := K.1 where K := ext<K0|Polynomial(K0, [1, 0, -6, 0, 35, 0, -44, 0, 
+149, 0, 176, 0, 75, 0, 14, 0, 1])> where K0 is RationalField()
+Minimal polynomial of j-invariant x^2 - 1264000*x - 681472000
+Discriminant of Q(j): 5
+What's the CM order? true -20
+MatrixGroup<2, K | [
+    Matrix(SparseMatrix(K, 2, 2, [
+    <1, 2, 1/8166*(-2993*w^15 - 43575*w^13 - 248437*w^11 - 659586*w^9 - 
+    778486*w^7 - 203313*w^5 - 99171*w^3 - 11669*w)>, <2, 1, 1/40830*(19497*w^15 
+    + 276185*w^13 + 1506809*w^11 + 3664518*w^9 + 3425130*w^7 - 490595*w^5 + 
+    431029*w^3 + 4069*w)>]))
+]> where w := K.1 where K := ext<K0|Polynomial(K0, [1, 0, -6, 0, 35, 0, -44, 0, 
+149, 0, 176, 0, 75, 0, 14, 0, 1])> where K0 is RationalField()
+Minimal polynomial of j-invariant x^2 - 1264000*x - 681472000
+Discriminant of Q(j): 5
+What's the CM order? true -20
+> 
+> 
+> 
+> /*
+> Step 2: we check the lattice of endomorphism rings of J_{20} over various
+> subfields of the field L over which all endomorphisms are defined. Only 
+> over L do we find a factor of multiplicity 4.
+> We note that, since we already know the endomorphism algebra of J_{20} and
+> the method correctly detects all the endomorphisms of J_{20}, the result
+> of this calculation is unconditional.
+> */
+> prec := 100;
+> R<t> := PolynomialRing(RationalsExtra(prec));
+
+>> R<t> := PolynomialRing(RationalsExtra(prec));
+                          ^
+User error: Identifier 'RationalsExtra' has not been declared or assigned
+> f := t^20 + 1;
+
+>> f := t^20 + 1;
+        ^
+User error: Identifier 't' has not been declared or assigned
+> X := HyperellipticCurve(f);
+
+>> X := HyperellipticCurve(f);
+                           ^
+User error: Identifier 'f' has not been declared or assigned
+> HeuristicEndomorphismLatticeDescription(X);
+
+>> HeuristicEndomorphismLatticeDescription(X);
+   ^
+User error: Identifier 'HeuristicEndomorphismLatticeDescription' has not been 
+declared or assigned
+> 

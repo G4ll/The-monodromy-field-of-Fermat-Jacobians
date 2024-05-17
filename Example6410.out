@@ -1,0 +1,362 @@
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 15
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 1.580
+Number of generators: 1
+[
+    1/75*(40*zeta_15^7 - 32*zeta_15^6 - 76*zeta_15^5 + 108*zeta_15^4 + 
+        36*zeta_15^3 - 112*zeta_15^2 + 44*zeta_15 + 28)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 21
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 2.580
+Number of generators: 1
+[
+    1/63*(-4*zeta_21^11 - 12*zeta_21^10 + 80*zeta_21^9 - 88*zeta_21^8 - 
+        28*zeta_21^7 + 116*zeta_21^6 - 52*zeta_21^5 - 48*zeta_21^4 + 
+        20*zeta_21^3 + 108*zeta_21^2 - 144*zeta_21 + 60)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 33
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 7.160
+Number of generators: 1
+[
+    1/297*(20*zeta_33^19 - 60*zeta_33^18 + 80*zeta_33^17 - 48*zeta_33^16 + 
+        4*zeta_33^15 + 28*zeta_33^14 - 32*zeta_33^13 - 4*zeta_33^12 + 
+        32*zeta_33^11 - 28*zeta_33^10 + 56*zeta_33^8 - 96*zeta_33^7 + 
+        96*zeta_33^6 - 64*zeta_33^5 + 32*zeta_33^4 - 24*zeta_33^3 + 32*zeta_33^2
+        - 36*zeta_33 + 20)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 35
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 6.950
+Number of generators: 1
+[
+    1/7*(9096*zeta_35^23 - 17292*zeta_35^22 + 11932*zeta_35^21 + 4272*zeta_35^20
+        - 21928*zeta_35^19 + 24928*zeta_35^18 - 1140*zeta_35^17 - 
+        16220*zeta_35^16 + 4748*zeta_35^15 + 6816*zeta_35^14 + 832*zeta_35^13 - 
+        10096*zeta_35^12 + 12584*zeta_35^11 - 7468*zeta_35^10 - 4524*zeta_35^9 +
+        19076*zeta_35^8 - 18600*zeta_35^7 + 4640*zeta_35^6 - 592*zeta_35^5 + 
+        2352*zeta_35^4 + 11132*zeta_35^3 - 18008*zeta_35^2 + 5592*zeta_35 + 
+        2756)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 39
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 10.830
+Number of generators: 1
+[
+    1/3*(-236*zeta_39^23 + 176*zeta_39^22 + 208*zeta_39^21 - 108*zeta_39^20 + 
+        156*zeta_39^19 + 100*zeta_39^18 - 248*zeta_39^17 + 12*zeta_39^16 - 
+        20*zeta_39^15 - 300*zeta_39^14 + 108*zeta_39^13 + 192*zeta_39^12 - 
+        88*zeta_39^11 - 32*zeta_39^10 + 316*zeta_39^9 - 48*zeta_39^7 + 
+        156*zeta_39^6 - 216*zeta_39^5 - 208*zeta_39^4 + 140*zeta_39^3 - 
+        128*zeta_39^2 - 84*zeta_39 + 280)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 45
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 11.860
+Number of generators: 1
+[
+    581404*zeta_45^23 + 202284*zeta_45^22 - 349300*zeta_45^21 - 
+        1180068*zeta_45^20 - 518428*zeta_45^19 + 592640*zeta_45^18 + 
+        1185644*zeta_45^17 + 733044*zeta_45^16 - 369740*zeta_45^15 - 
+        557932*zeta_45^14 - 710972*zeta_45^13 - 222900*zeta_45^12 - 
+        131356*zeta_45^11 + 530284*zeta_45^10 + 719040*zeta_45^9 + 
+        853792*zeta_45^8 - 204008*zeta_45^7 - 1088780*zeta_45^6 - 
+        1004956*zeta_45^5 - 43756*zeta_45^4 + 962380*zeta_45^3 + 
+        535860*zeta_45^2 + 83260*zeta_45 - 443200
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 51
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 19.690
+Number of generators: 1
+[
+    1/17*(3051600*zeta_51^31 - 5962468*zeta_51^30 + 5667732*zeta_51^29 - 
+        2284364*zeta_51^28 - 984740*zeta_51^27 + 1049688*zeta_51^26 + 
+        1954252*zeta_51^25 - 4810440*zeta_51^24 + 4457796*zeta_51^23 - 
+        1036976*zeta_51^22 - 2262340*zeta_51^21 + 2368888*zeta_51^20 + 
+        602980*zeta_51^19 - 3445916*zeta_51^18 + 3073116*zeta_51^17 + 
+        372800*zeta_51^16 - 3676096*zeta_51^15 + 6828944*zeta_51^14 - 
+        6773244*zeta_51^13 + 3631592*zeta_51^12 - 595928*zeta_51^11 + 
+        752584*zeta_51^10 - 3977680*zeta_51^9 + 7050796*zeta_51^8 - 
+        6898816*zeta_51^7 + 3669044*zeta_51^6 - 558476*zeta_51^5 + 
+        627012*zeta_51^4 - 3755828*zeta_51^3 + 6749212*zeta_51^2 - 
+        6519032*zeta_51 + 3195716)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 55
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 34.010
+Number of generators: 1
+[
+    1/125*(-456*zeta_55^39 - 116*zeta_55^38 - 184*zeta_55^37 + 16*zeta_55^36 + 
+        280*zeta_55^35 - 64*zeta_55^34 + 388*zeta_55^33 - 320*zeta_55^32 + 
+        648*zeta_55^31 - 136*zeta_55^30 + 380*zeta_55^29 - 1040*zeta_55^28 - 
+        228*zeta_55^27 - 112*zeta_55^26 - 76*zeta_55^25 + 236*zeta_55^24 - 
+        724*zeta_55^23 + 520*zeta_55^22 + 64*zeta_55^21 + 836*zeta_55^20 + 
+        100*zeta_55^19 + 32*zeta_55^18 - 664*zeta_55^17 + 80*zeta_55^16 - 
+        348*zeta_55^15 + 204*zeta_55^14 - 688*zeta_55^13 - 140*zeta_55^12 - 
+        144*zeta_55^11 + 272*zeta_55^10 + 700*zeta_55^9 - 192*zeta_55^8 + 
+        480*zeta_55^7 - 824*zeta_55^6 + 680*zeta_55^5 - 204*zeta_55^4 - 
+        72*zeta_55^3 - 424*zeta_55^2 - 416*zeta_55 + 320)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 57
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 34.640
+Number of generators: 1
+[
+    1/361*(22111416*zeta_57^35 - 44619588*zeta_57^34 + 41219928*zeta_57^33 - 
+        11025360*zeta_57^32 - 19399464*zeta_57^31 + 27686016*zeta_57^30 - 
+        10584540*zeta_57^29 - 9315216*zeta_57^28 + 4667436*zeta_57^27 + 
+        22001508*zeta_57^26 - 48040812*zeta_57^25 + 49464648*zeta_57^24 - 
+        22706316*zeta_57^23 - 5849964*zeta_57^22 + 11657520*zeta_57^21 + 
+        5414148*zeta_57^20 - 23873400*zeta_57^19 + 18459252*zeta_57^18 + 
+        12215880*zeta_57^17 - 19785420*zeta_57^16 + 1960128*zeta_57^15 + 
+        15628680*zeta_57^14 - 10731348*zeta_57^13 - 17527572*zeta_57^12 + 
+        46891980*zeta_57^11 - 49016124*zeta_57^10 + 25142724*zeta_57^9 + 
+        854820*zeta_57^8 - 6345828*zeta_57^7 - 13142052*zeta_57^6 + 
+        32118120*zeta_57^5 - 25833528*zeta_57^4 - 4087980*zeta_57^3 + 
+        35530920*zeta_57^2 - 42332652*zeta_57 + 22040964)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 63
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 39.200
+Number of generators: 1
+[
+    1/63*(-29368*zeta_63^35 - 7520*zeta_63^34 + 20712*zeta_63^33 + 
+        61960*zeta_63^32 + 32340*zeta_63^31 - 17672*zeta_63^30 - 
+        58060*zeta_63^29 - 64836*zeta_63^28 - 31628*zeta_63^27 - 7276*zeta_63^26
+        + 55512*zeta_63^25 + 88804*zeta_63^24 + 96688*zeta_63^23 + 
+        13468*zeta_63^22 - 77696*zeta_63^21 - 121628*zeta_63^20 - 
+        94660*zeta_63^19 - 11108*zeta_63^18 + 50620*zeta_63^17 + 
+        113408*zeta_63^16 + 109324*zeta_63^15 + 37496*zeta_63^14 - 
+        57620*zeta_63^13 - 117008*zeta_63^12 - 78540*zeta_63^11 - 
+        27592*zeta_63^10 + 39312*zeta_63^9 + 55592*zeta_63^8 + 70664*zeta_63^7 +
+        46068*zeta_63^6 - 5248*zeta_63^5 - 52648*zeta_63^4 - 66588*zeta_63^3 - 
+        11472*zeta_63^2 + 15496*zeta_63 + 30756)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 65
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 44.730
+Number of generators: 1
+[
+    1/13*(26360*zeta_65^47 - 82440*zeta_65^46 + 108940*zeta_65^45 - 
+        93560*zeta_65^44 + 42160*zeta_65^43 + 70280*zeta_65^42 - 
+        193860*zeta_65^41 + 234680*zeta_65^40 - 159440*zeta_65^39 - 
+        34700*zeta_65^38 + 254200*zeta_65^37 - 319760*zeta_65^36 + 
+        211940*zeta_65^35 - 6520*zeta_65^34 - 259660*zeta_65^33 + 
+        430060*zeta_65^32 - 371180*zeta_65^31 + 156440*zeta_65^30 + 
+        140500*zeta_65^29 - 453080*zeta_65^28 + 549840*zeta_65^27 - 
+        311000*zeta_65^26 - 71580*zeta_65^25 + 386700*zeta_65^24 - 
+        516700*zeta_65^23 + 375940*zeta_65^22 - 32020*zeta_65^21 - 
+        302500*zeta_65^20 + 480560*zeta_65^19 - 465020*zeta_65^18 + 
+        222780*zeta_65^17 + 157140*zeta_65^16 - 429000*zeta_65^15 + 
+        457820*zeta_65^14 - 278280*zeta_65^13 - 27980*zeta_65^12 + 
+        277440*zeta_65^11 - 308700*zeta_65^10 + 207060*zeta_65^9 - 
+        65180*zeta_65^8 - 133160*zeta_65^7 + 259880*zeta_65^6 - 213100*zeta_65^5
+        + 96060*zeta_65^4 + 30420*zeta_65^3 - 150720*zeta_65^2 + 154700*zeta_65 
+        - 55440)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 69
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 60.920
+Number of generators: 1
+[
+    1/23*(-798976*zeta_69^43 + 445788*zeta_69^42 + 1869384*zeta_69^41 - 
+        4448708*zeta_69^40 + 3667856*zeta_69^39 + 1271348*zeta_69^38 - 
+        6501264*zeta_69^37 + 7066892*zeta_69^36 - 1841912*zeta_69^35 - 
+        5397020*zeta_69^34 + 8984576*zeta_69^33 - 5510244*zeta_69^32 - 
+        2401516*zeta_69^31 + 7905664*zeta_69^30 - 6995888*zeta_69^29 + 
+        1170104*zeta_69^28 + 4524160*zeta_69^27 - 5902540*zeta_69^26 + 
+        2754680*zeta_69^25 + 1311392*zeta_69^24 - 2510700*zeta_69^23 + 
+        1199308*zeta_69^22 - 243980*zeta_69^21 + 82164*zeta_69^20 - 
+        1567672*zeta_69^19 + 3209980*zeta_69^18 - 2474220*zeta_69^17 - 
+        1727108*zeta_69^16 + 6183564*zeta_69^15 - 6012420*zeta_69^14 + 
+        593016*zeta_69^13 + 6065808*zeta_69^12 - 8576508*zeta_69^11 + 
+        4428384*zeta_69^10 + 3501720*zeta_69^9 - 8694264*zeta_69^8 + 
+        6748508*zeta_69^7 - 36480*zeta_69^6 - 5720680*zeta_69^5 + 
+        6589072*zeta_69^4 - 2592864*zeta_69^3 - 2266720*zeta_69^2 + 
+        3822092*zeta_69 - 1997788)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 75
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 38.790
+Number of generators: 1
+[
+    1/6075*(8820*zeta_75^39 - 488*zeta_75^38 - 18140*zeta_75^37 - 
+        6000*zeta_75^36 + 5388*zeta_75^35 - 8004*zeta_75^34 - 16140*zeta_75^33 +
+        9232*zeta_75^32 + 17304*zeta_75^31 - 8112*zeta_75^30 - 16704*zeta_75^29 
+        + 13444*zeta_75^28 + 16908*zeta_75^27 - 9828*zeta_75^26 - 
+        13776*zeta_75^25 + 21464*zeta_75^24 + 17056*zeta_75^23 - 
+        28768*zeta_75^22 - 19516*zeta_75^21 + 21888*zeta_75^20 + 7280*zeta_75^19
+        - 27872*zeta_75^18 - 2500*zeta_75^17 + 32588*zeta_75^16 + 
+        8388*zeta_75^15 - 21400*zeta_75^14 + 2328*zeta_75^13 + 16312*zeta_75^12 
+        - 3184*zeta_75^11 - 22164*zeta_75^10 + 3632*zeta_75^9 + 17824*zeta_75^8 
+        - 6092*zeta_75^7 - 18916*zeta_75^6 + 5664*zeta_75^5 + 7880*zeta_75^4 - 
+        5196*zeta_75^3 - 1732*zeta_75^2 + 14756*zeta_75 + 12264)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 77
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 93.440
+Number of generators: 1
+[
+    1/77*(606072*zeta_77^59 - 2021500*zeta_77^58 + 1571188*zeta_77^57 + 
+        1033516*zeta_77^56 - 1866160*zeta_77^55 + 230812*zeta_77^54 + 
+        793504*zeta_77^53 + 425928*zeta_77^52 - 1878084*zeta_77^51 + 
+        494520*zeta_77^50 + 1565104*zeta_77^49 + 332128*zeta_77^48 - 
+        3681904*zeta_77^47 + 1704676*zeta_77^46 + 3843896*zeta_77^45 - 
+        4598040*zeta_77^44 - 500984*zeta_77^43 + 3283052*zeta_77^42 + 
+        404328*zeta_77^41 - 3503820*zeta_77^40 + 133316*zeta_77^39 + 
+        3662072*zeta_77^38 - 681000*zeta_77^37 - 4573268*zeta_77^36 + 
+        2234772*zeta_77^35 + 5106636*zeta_77^34 - 5175032*zeta_77^33 - 
+        2259792*zeta_77^32 + 5238084*zeta_77^31 - 116376*zeta_77^30 - 
+        3902760*zeta_77^29 + 521476*zeta_77^28 + 3527208*zeta_77^27 - 
+        209248*zeta_77^26 - 5047736*zeta_77^25 + 2230352*zeta_77^24 + 
+        4426364*zeta_77^23 - 3855220*zeta_77^22 - 2585044*zeta_77^21 + 
+        4608528*zeta_77^20 + 390044*zeta_77^19 - 4124884*zeta_77^18 + 
+        1441500*zeta_77^17 + 1620620*zeta_77^16 + 256768*zeta_77^15 - 
+        2988536*zeta_77^14 + 940780*zeta_77^13 + 3041568*zeta_77^12 - 
+        2485128*zeta_77^11 - 1133432*zeta_77^10 + 1625272*zeta_77^9 + 
+        999476*zeta_77^8 - 2245828*zeta_77^7 + 945432*zeta_77^6 + 
+        466636*zeta_77^5 - 239300*zeta_77^4 - 503408*zeta_77^3 - 
+        471288*zeta_77^2 + 1629500*zeta_77 - 876224)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 85
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 77.990
+Number of generators: 1
+[
+    1/5*(6912224480*zeta_85^63 + 5603482268*zeta_85^62 + 1351578732*zeta_85^61 -
+        3365682060*zeta_85^60 - 6927042184*zeta_85^59 - 1221615656*zeta_85^58 - 
+        984769260*zeta_85^57 - 1458921144*zeta_85^56 - 1429905712*zeta_85^55 - 
+        901652116*zeta_85^54 + 6839123064*zeta_85^53 + 6366221244*zeta_85^52 + 
+        2697866320*zeta_85^51 - 1876606948*zeta_85^50 - 5808610508*zeta_85^49 - 
+        866691812*zeta_85^48 - 1511065952*zeta_85^47 + 4240011572*zeta_85^46 + 
+        2681027324*zeta_85^45 - 832693880*zeta_85^44 + 2843827508*zeta_85^43 - 
+        307030288*zeta_85^42 + 2520098592*zeta_85^41 - 1394503712*zeta_85^40 - 
+        5875490340*zeta_85^39 - 1435163032*zeta_85^38 - 2373654804*zeta_85^37 + 
+        3351623624*zeta_85^36 + 2053834788*zeta_85^35 - 961643628*zeta_85^34 + 
+        3268303336*zeta_85^33 + 505875052*zeta_85^32 + 3432296996*zeta_85^31 - 
+        673284804*zeta_85^30 + 1337560872*zeta_85^29 + 3923285604*zeta_85^28 - 
+        1747422008*zeta_85^27 - 949198268*zeta_85^26 - 5684016028*zeta_85^25 - 
+        2614648692*zeta_85^24 + 2360475060*zeta_85^23 - 376291312*zeta_85^22 + 
+        2902889040*zeta_85^21 - 674439164*zeta_85^20 + 1841214236*zeta_85^19 + 
+        4762965564*zeta_85^18 - 832523828*zeta_85^17 - 270931788*zeta_85^16 - 
+        5500724184*zeta_85^15 - 2985070784*zeta_85^14 + 1589144736*zeta_85^13 + 
+        5623468136*zeta_85^12 + 7735040984*zeta_85^11 + 306717476*zeta_85^10 - 
+        1341175980*zeta_85^9 - 1485810140*zeta_85^8 - 1139241304*zeta_85^7 - 
+        416021088*zeta_85^6 - 6455991964*zeta_85^5 - 4416130856*zeta_85^4 + 
+        158084664*zeta_85^3 + 4668200356*zeta_85^2 + 7589951684*zeta_85 + 
+        1034985076)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 87
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 68.630
+Number of generators: 1
+[
+    1/9*(-160356404*zeta_87^55 + 22321112*zeta_87^54 + 123227956*zeta_87^53 - 
+        28768040*zeta_87^52 + 60142400*zeta_87^51 + 69258288*zeta_87^50 - 
+        98638824*zeta_87^49 + 27981144*zeta_87^48 + 74795368*zeta_87^47 - 
+        94365964*zeta_87^46 + 6554320*zeta_87^45 + 28441192*zeta_87^44 - 
+        153475464*zeta_87^43 - 15814884*zeta_87^42 + 86018072*zeta_87^41 - 
+        29254284*zeta_87^40 + 94752064*zeta_87^39 + 90069280*zeta_87^38 - 
+        115944416*zeta_87^37 + 12569828*zeta_87^36 + 82729140*zeta_87^35 - 
+        73208256*zeta_87^34 + 14693216*zeta_87^33 + 18337704*zeta_87^32 - 
+        152449568*zeta_87^31 - 12465560*zeta_87^30 + 69066932*zeta_87^29 - 
+        56601372*zeta_87^28 + 83382636*zeta_87^27 - 40560244*zeta_87^26 - 
+        61439036*zeta_87^25 + 127369280*zeta_87^24 + 26636684*zeta_87^23 - 
+        21494360*zeta_87^22 + 116135772*zeta_87^21 - 50574240*zeta_87^20 - 
+        135837852*zeta_87^19 + 34982720*zeta_87^18 - 42250172*zeta_87^17 - 
+        46697728*zeta_87^16 + 112849724*zeta_87^15 - 43782792*zeta_87^14 - 
+        91436136*zeta_87^13 + 111317104*zeta_87^12 + 34084212*zeta_87^11 - 
+        2296012*zeta_87^10 + 119641172*zeta_87^9 - 47068840*zeta_87^8 - 
+        116639504*zeta_87^7 + 42430248*zeta_87^6 - 58302348*zeta_87^5 - 
+        76694828*zeta_87^4 + 109627176*zeta_87^3 - 14315704*zeta_87^2 - 
+        81532492*zeta_87 + 85002196)
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 91
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 166.790
+Number of generators: 1
+[
+    1573398360*zeta_91^71 + 5869529400*zeta_91^70 - 8810545404*zeta_91^69 - 
+        6705885072*zeta_91^68 + 8232518608*zeta_91^67 + 7638305364*zeta_91^66 - 
+        7419266940*zeta_91^65 - 6859224848*zeta_91^64 + 12413873864*zeta_91^63 +
+        417850476*zeta_91^62 - 12061069508*zeta_91^61 - 1246798252*zeta_91^60 + 
+        12301472380*zeta_91^59 + 4259790488*zeta_91^58 - 4663666476*zeta_91^57 -
+        7102581872*zeta_91^56 - 4030918572*zeta_91^55 + 6819738884*zeta_91^54 + 
+        5071988052*zeta_91^53 - 5952149704*zeta_91^52 - 3961191556*zeta_91^51 + 
+        12755602592*zeta_91^50 + 2988565356*zeta_91^49 - 20290877124*zeta_91^48 
+        - 4751773828*zeta_91^47 + 20416575324*zeta_91^46 + 9063150456*zeta_91^45
+        - 11800226544*zeta_91^44 - 10770097876*zeta_91^43 + 
+        8461631660*zeta_91^42 + 3790661092*zeta_91^41 - 7845196116*zeta_91^40 - 
+        4195422308*zeta_91^39 + 9373048172*zeta_91^38 + 12684142140*zeta_91^37 -
+        8577229588*zeta_91^36 - 15696605832*zeta_91^35 - 715752004*zeta_91^34 + 
+        16030270916*zeta_91^33 + 4461502304*zeta_91^32 - 7878195408*zeta_91^31 -
+        5640828504*zeta_91^30 + 6817672068*zeta_91^29 + 4375687652*zeta_91^28 - 
+        13843767652*zeta_91^27 - 5245483984*zeta_91^26 + 15452820276*zeta_91^25 
+        + 14513977424*zeta_91^24 - 14352734332*zeta_91^23 - 
+        16477814076*zeta_91^22 + 10744199160*zeta_91^21 + 10243340544*zeta_91^20
+        - 7422914516*zeta_91^19 - 3117942364*zeta_91^18 + 6837296564*zeta_91^17 
+        + 3299283348*zeta_91^16 - 7111430924*zeta_91^15 - 6057787516*zeta_91^14 
+        - 926755288*zeta_91^13 + 8231570472*zeta_91^12 + 9794913608*zeta_91^11 -
+        7229793700*zeta_91^10 - 10767806916*zeta_91^9 + 5801425048*zeta_91^8 + 
+        9596697472*zeta_91^7 - 10523452760*zeta_91^6 - 2700886804*zeta_91^5 + 
+        10350751356*zeta_91^4 + 3716338908*zeta_91^3 - 10211969168*zeta_91^2 - 
+        5131032228*zeta_91 + 7775036524
+]
+----------------------------
+Loading "FermatJacobians1_computeMTandKconn.m"
+Working with m = 93
+** Computing equations for the Mumford-Tate group **
+** Generate Gamma-products **
+Time: 192.900
