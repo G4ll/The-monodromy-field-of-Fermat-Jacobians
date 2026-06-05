@@ -1,0 +1,93 @@
+Time: 0.300
+Computing a splitting field...
+Base field: F_61 = F_61^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 122
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_181 = F_181^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 162
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_241 = F_241^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 114
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_421 = F_421^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 114
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_541 = F_541^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 162
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_601 = F_601^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 122
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_661 = F_661^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 122
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_1021 = F_1021^1
+Orders of root-of-unity ratios: [ 1 ]
+Minimal degree over F_p: 1
+dim End^0 over base field: 170
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_1201 = F_1201^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 122
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_1321 = F_1321^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 122
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_1381 = F_1381^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 114
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_1621 = F_1621^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 162
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_1741 = F_1741^1
+Orders of root-of-unity ratios: [ 1 ]
+Minimal degree over F_p: 1
+dim End^0 over base field: 170
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_1801 = F_1801^1
+Orders of root-of-unity ratios: [ 1, 2 ]
+Minimal degree over F_p: 2
+dim End^0 over base field: 122
+dim geometric End^0: 170
+Computing a splitting field...
+Base field: F_1861 = F_1861^1
+Orders of root-of-unity ratios: [ 1 ]
+Minimal degree over F_p: 1
+dim End^0 over base field: 170
+dim geometric End^0: 170
+
+Total time: 156.990 seconds, Total memory usage: 32.09MB
