@@ -6,8 +6,26 @@ X20, X24, X60, of Corollary 3.5.5
 /* ------------------------------------------------------------ */
 
 SetLogFile("Corollary355.out");
-AttachSpec("./CHIMP/CHIMP.spec");
+AttachSpec("/home/gallo/ConnectedMonodromyField/CHIMP/CHIMP.spec");
 prec := 100;
+
+m := 12;
+load "FermatJacobians1_computeMTandKconn.m";
+"** Computing the connected monodromy field of J12**";
+time F12 := compute_Kconn();
+"The connected monodromy field of J12 is the", F12;
+
+R<t> := PolynomialRing(RationalsExtra(prec));
+f := t^m + 1;
+X := HyperellipticCurve(f);
+"** Computing the Endomorphism lattice of J12 via the methods of [CMSV19] **";
+time lat := HeuristicEndomorphismLattice(X);
+print lat;
+L12 := NumberField(R!lat[3][1][2]);
+"Do the two computation give the same Q(EndJm)?";
+IsIsomorphic(F12, L12);
+
+/* ------------------------------------------------------------ */
 
 m := 20;
 load "FermatJacobians1_computeMTandKconn.m";
